@@ -136,10 +136,7 @@ class Campaigns_For_Laposta_Admin {
 		 * The "plugins.php" must match with the previously added add_submenu_page first option.
 		 * For custom post type you have to change 'plugins.php?page=' to 'edit.php?post_type=your_custom_post_type&page='
 		 */
-		//$settings_link = array( '<a href="' . admin_url( 'plugins.php?page=' . $this->plugin_name ) . '">' . __( 'Settings', $this->plugin_name ) . '</a>', );
-
-		// -- OR --
-
+		
 		$settings_link = array( '<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">' . __( 'Settings', $this->plugin_name ) . '</a>', );
 
 		return array_merge(  $settings_link, $links );
@@ -163,19 +160,6 @@ class Campaigns_For_Laposta_Admin {
 	 * @return mixed as validated fields
 	 */
 	public function validate($input) {
-
-		// $valid = array();
-
-		// $valid['example_checkbox'] = ( isset( $input['example_checkbox'] ) && ! empty( $input['example_checkbox'] ) ) ? 1 : 0;
-		// $valid['example_text'] = ( isset( $input['example_text'] ) && ! empty( $input['example_text'] ) ) ? esc_attr( $input['example_text'] ) : 'default';
-		// $example_textarea['example_textarea'] = ( isset( $input['example_textarea'] ) && ! empty( $input['example_textarea'] ) ) ? sanitize_textarea_field( $input['example_textarea'] ) : 'default';
-		// $valid['example_select'] = ( isset($input['example_select'] ) && ! empty( $input['example_select'] ) ) ? esc_attr($input['example_select']) : 1;
-
-		// return $valid;
-
-		// -- OR --
-
-		
 
 		$options = get_option( $this->plugin_name );
 
@@ -213,9 +197,6 @@ class Campaigns_For_Laposta_Admin {
 			$atts
 		);
 
-		// code...
-
-		//$var = ( strtolower( $args['arg1']) != "" ) ? strtolower( $args['arg1'] ) : 'default';
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, "https://api.laposta.org/v2/campaign");
 		curl_setopt($ch, CURLOPT_USERPWD, $api_key_text . ":");  
