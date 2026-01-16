@@ -117,9 +117,6 @@ class Campaigns_For_Laposta_Public {
 			$atts
 		);
 
-		// code...
-
-		//$var = ( strtolower( $args['arg1']) != "" ) ? strtolower( $args['arg1'] ) : 'default';
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, "https://api.laposta.org/v2/campaign");
 		curl_setopt($ch, CURLOPT_USERPWD, $api_key_text . ":");  
