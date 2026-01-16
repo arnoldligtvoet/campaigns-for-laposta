@@ -36,8 +36,8 @@ Possibly
 
 == Screenshots ==
 
-1. Main settings with the Laposta API key and the campaign selection. 
-2. Sample of the data and the short-code.
+1. /assets/campaigns_for_laposta1.jpg - Main settings with the Laposta API key and the campaign selection. 
+2. /assets/campaigns_for_laposta2.jpg - Sample of the data and the short-code.
 
 == Changelog ==
 
